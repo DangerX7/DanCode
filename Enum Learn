@@ -1,0 +1,31 @@
+using System;
+
+namespace ConsoleApp4
+{
+    public enum TeamName
+    {
+        Samurai = 1,
+        Dodgers = 2,
+        Patriots = 3,
+        Military = 4
+    }
+
+
+    class Program
+    {
+        static void Main()
+        {
+            var choseTeam = TeamName.Military;
+            Console.WriteLine((int)choseTeam);
+
+            var choseTeam2 = 3;
+            Console.WriteLine((TeamName)choseTeam2);
+
+            Console.WriteLine(choseTeam.ToString());
+
+            var worstTeam = "Samurai";
+            var selection = (TeamName)Enum.Parse(typeof(TeamName), worstTeam);
+            Console.WriteLine(selection);
+        }
+    }
+}
